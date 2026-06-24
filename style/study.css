@@ -1,0 +1,61 @@
+#wrap{
+    background-color: aliceblue;
+    width:402px; height:874px;
+    padding:45px 15px;
+}
+#wrap > header{border-bottom:#000  solid 1px;}
+#wrap > header > .title_icons{
+    padding-bottom:20px;
+}
+#wrap > header > .title_icons > h1{}
+#wrap > header > .title_icons > h1 > a{
+    color:#4C00FF;
+    font-size:1.5em; font-weight:700;
+}
+#wrap > header > .header_icons{
+    
+}
+#wrap > header > .header_icons > .search_btn{
+    margin-right:8px;
+}
+#wrap > header > .header_icons > .menu_btn{}
+#wrap > header > nav{
+    padding-bottom:10px;
+}
+#wrap > header > nav > .all{
+    color: #999;
+    font-size:1.125em;
+    font-weight:500;
+}
+#wrap > header > nav > .all >.num{
+    color: #999;
+    font-size:1.125em;
+    font-weight:500;
+}
+#wrap > header > nav > .today{
+    color: #999;
+    font-size:1.125em;
+    font-weight:500;
+}
+#wrap > header > nav > .today >.num{
+    color: #999;
+    font-size:1.125em;
+    font-weight:500;
+}
+#wrap > header > nav > .active{
+    color: #4C00FF;
+    font-weight:600;
+}
+#wrap > header > nav > .active >.num{
+    color: #4C00FF;
+    font-weight:600;
+}
+#wrap > main{}
+#wrap > main > .to_do_list{
+    margin-top:10px;
+}
+#wrap > main > .to_do_list > li{}
+#wrap > main > .to_do_list > li > .date{}
+#wrap > main > .to_do_list > li > .date > span{}
+#wrap > main > .to_do_list > li > .content{}
+#wrap > main > .to_do_list > li > .content > span{}
