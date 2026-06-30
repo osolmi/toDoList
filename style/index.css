@@ -6,6 +6,7 @@
 /* 형제선택자 + 인접형제선택자 {속성:값;} */
 /* 형제선택자 ~ 뒤에모든형제들 {속성:값;} */
 #wrap {
+    position:relative;/* 기준 */
     width: 402px; height: 874px;/* css 숫자입력 시 단위작성하기 */
     background-color:white;
     /* 안쪽여백, 피그마 오토레이아웃 패딩과 동일 */
@@ -31,7 +32,7 @@
     margin-bottom:10px;
 }
 #wrap > header > .title_icons{
-    padding-bottom:20px;
+    padding-bottom:15px;
     display:flex;
     flex-flow:row nowrap;
     justify-content:space-between;
@@ -85,7 +86,11 @@
     color:#4C00FF;
 }
 /* ------------------main */
-#wrap > main{}
+#wrap > main{
+    
+    height:90%;
+    overflow:auto;/* 내용이 넘친 방향만 자동으로 스크롤을 만들고 나머지는 hidden처리 */
+}
 #wrap > main > .to_do_list{
     display:flex;
     flex-flow:column-reverse nowrap;
@@ -94,7 +99,6 @@
 }
 #wrap > main > .to_do_list > li{
     /* 자식 date, content를 정렬하고 여백을 띄우기 위해 부모(li) flex적용 */
-    background-color:aqua;
     display:flex; /* display:flex 외에 나머지 속성은 순서 상관 없음 */
     flex-flow:row nowrap;
     justify-content:flex-start;
@@ -115,14 +119,16 @@
 }
 /* ------------글쓰기 팝업 */
 #wrap > main > .write_popup{
-    background-color: aquamarine;
-    border-radius:10px;
-    width:310px; height:215px;
+    background-color: white;
+    border-radius:5px;
+    width:280px; height:215px;
     padding:20px;
     display:flex;
     flex-flow:column nowrap;
     justify-content:space-between;
     /* align-items:flex-end; 자식 모두에게 주고 싶은 경우*/
+    /* 팝업띄우기 */
+    position:absolute; left:15%; top:38%;
 }
 #wrap > main > .write_popup > .info{
     font-size:0.875em;
@@ -132,4 +138,12 @@
     width:42px;
     align-self: flex-end;/* 한 자식한테만 개별로 적용하고 싶은 경우 */
 }
-#wrap > main > .write_popup > .write_btn > image{}
+#wrap > main > .write_popup > .write_btn > img{}
+/* ================글쓰기버튼 */
+#wrap > main > .write_popup_btn{
+    display:block;
+    width:42px; height:42px;
+    /* position:fixed; bottom:45px; right:15px; */
+    position:absolute; bottom:45px; right:15px;
+}
+#wrap > main > .write_popup_btn > img{width:100%}
